@@ -283,20 +283,16 @@
           nebo digitální transformací? Ozvěte se.
         </p>
         <div class="contact__links">
-          <a class="contact__card" href="mailto:vtrejdl@outlook.cz">
+          <div class="contact__card contact__card--static">
             <span class="contact__icon">✉️</span>
             <span class="contact__label">E-mail</span>
-            <span class="contact__value">vtrejdl@outlook.cz</span>
-          </a>
+            <!-- Adresa není v HTML; sestaví se až JavaScriptem (ochrana proti scraperům) a není označitelná -->
+            <span class="contact__value contact__email" id="email" aria-label="E-mailová adresa, chráněná proti robotům">načítání&nbsp;…</span>
+          </div>
           <a class="contact__card" href="https://www.linkedin.com/in/vaclavtrejdl" target="_blank" rel="noopener">
             <span class="contact__icon">in</span>
             <span class="contact__label">LinkedIn</span>
             <span class="contact__value">/in/vaclavtrejdl</span>
-          </a>
-          <a class="contact__card" href="tel:+420724488113">
-            <span class="contact__icon">📞</span>
-            <span class="contact__label">Telefon</span>
-            <span class="contact__value">+420 724 488 113</span>
           </a>
         </div>
       </div>
@@ -314,6 +310,15 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // E-mail je uložen jen jako kódy znaků a sestaví se až v prohlížeči.
+    // V HTML/JS zdroji se čitelná adresa nikde nevyskytuje — ochrana proti scraperům.
+    (function () {
+      var codes = [118,116,114,101,106,100,108,64,103,109,97,105,108,46,99,111,109];
+      var addr = codes.map(function (c) { return String.fromCharCode(c); }).join('');
+      var el = document.getElementById('email');
+      if (el) el.textContent = addr;
+    })();
   </script>
 </body>
 </html>
