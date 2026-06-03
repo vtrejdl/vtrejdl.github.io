@@ -10,6 +10,10 @@ _site/
 # Additional Ruby/bundler ignore for when you run: bundle install
 /vendor
 
+# Personal documents — kept out of the public repo (not referenced by the site)
+CV_Vaclav_Trejdl_Master_v4.pdf
+*.pdf
+
 # Specific ignore for GitHub Pages
 # GitHub Pages will always use its own deployed version of pages-gem
 # This means GitHub Pages will NOT use your Gemfile.lock and therefore it is
