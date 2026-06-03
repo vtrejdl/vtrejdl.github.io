@@ -81,7 +81,7 @@
         <h2 class="section__title">Profil</h2>
         <div class="profil">
           <p>
-            Jsem <strong>byznys architekt, analytik a konzultant</strong> s více než 15 lety praxe na pomezí
+            Jsem <strong>byznys architekt, analytik a konzultant</strong> s více než 25 lety praxe na pomezí
             byznysu a IT. Pomáhám organizacím převádět potřeby do jasných požadavků a specifikací,
             nastavovat governance a dotahovat změny až k reálnému dodání a&nbsp;adopci.
           </p>
@@ -91,9 +91,10 @@
             a s tvorbou strategických dokumentů pro řízení ICT a&nbsp;digitální transformaci.
           </p>
           <div class="stats">
-            <div class="stat"><span class="stat__num">15+</span><span class="stat__label">let praxe na pomezí byznysu a IT</span></div>
+            <div class="stat"><span class="stat__num">25+</span><span class="stat__label">let praxe na pomezí byznysu a IT</span></div>
             <div class="stat"><span class="stat__num">~50</span><span class="stat__label">projektů v řízeném portfoliu</span></div>
             <div class="stat"><span class="stat__num">800+</span><span class="stat__label">uživatelů v adopci Office&nbsp;365</span></div>
+            <div class="stat"><span class="stat__num">4+</span><span class="stat__label">podporovaných neziskových organizací</span></div>
           </div>
 
           <div class="logos">
@@ -259,8 +260,7 @@
             <h3 class="subhead">Jazyky</h3>
             <ul class="lang">
               <li><span>Čeština</span><span class="lang__level">rodilý mluvčí</span></li>
-              <li><span>Angličtina</span><span class="lang__level">pokročilá pracovní</span></li>
-              <li><span>Ruština</span><span class="lang__level">základy</span></li>
+              <li><span>Angličtina</span><span class="lang__level">umožňující práci</span></li>
             </ul>
             <h3 class="subhead subhead--mt">Metodiky &amp; nástroje</h3>
             <div class="tags">
@@ -279,8 +279,9 @@
         <span class="section__kicker">05 — Kontakt</span>
         <h2 class="section__title">Spojme se</h2>
         <p class="contact__lead">
-          Hledáte propojení byznysu a IT, podporu s architekturou, řízením portfolia
-          nebo digitální transformací? Ozvěte se.
+          Potřebujete pomoc s transformací papírových procesů na digitální a jejich
+          optimalizací, nastavením byznys architektury, zavedením řízení portfolia projektů?
+          Ozvěte se.
         </p>
         <div class="contact__links">
           <div class="contact__card contact__card--static">
@@ -314,7 +315,7 @@
     // E-mail je uložen jen jako kódy znaků a sestaví se až v prohlížeči.
     // V HTML/JS zdroji se čitelná adresa nikde nevyskytuje — ochrana proti scraperům.
     (function () {
-      var codes = [118,116,114,101,106,100,108,64,103,109,97,105,108,46,99,111,109];
+      var codes = [118,97,99,108,97,118,64,116,114,101,106,100,108,46,99,111,109];
       var addr = codes.map(function (c) { return String.fromCharCode(c); }).join('');
       var el = document.getElementById('email');
       if (el) el.textContent = addr;
